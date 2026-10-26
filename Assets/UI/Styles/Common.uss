@@ -1,0 +1,97 @@
+/* Shared layout + component classes. Prefer these over inline styles. */
+
+.screen {
+    flex-grow: 1;
+    background-color: var(--color-bg);
+    padding: var(--space-lg);
+}
+
+.screen__header {
+    margin-bottom: var(--space-lg);
+}
+
+.screen__title {
+    font-size: var(--font-title);
+    color: var(--color-text);
+    -unity-font-style: bold;
+    margin-bottom: var(--space-sm);
+}
+
+.screen__subtitle {
+    font-size: var(--font-body);
+    color: var(--color-text-muted);
+}
+
+.stack {
+    flex-direction: column;
+}
+
+.stack--gap-sm {
+    margin-bottom: var(--space-sm);
+}
+
+.stack > * {
+    margin-bottom: var(--space-md);
+}
+
+.row {
+    flex-direction: row;
+    align-items: center;
+}
+
+.row--gap > * {
+    margin-right: var(--space-md);
+}
+
+.panel {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    border-width: 1px;
+    border-color: var(--color-border);
+    padding: var(--space-lg);
+}
+
+.btn {
+    height: 48px;
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+    border-radius: var(--radius-md);
+    border-width: 0;
+    font-size: var(--font-body);
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    transition-property: background-color, scale, opacity;
+    transition-duration: var(--transition-fast);
+}
+
+.btn--primary {
+    background-color: var(--color-accent);
+    color: #06201c;
+}
+
+.btn--secondary {
+    background-color: var(--color-surface-raised);
+    color: var(--color-text);
+    border-width: 1px;
+    border-color: var(--color-border);
+}
+
+.btn--danger {
+    background-color: var(--color-danger);
+    color: #fff;
+}
+
+.btn:disabled,
+.btn.is-disabled {
+    opacity: 0.45;
+}
+
+.label-body {
+    font-size: var(--font-body);
+    color: var(--color-text);
+}
+
+.label-muted {
+    font-size: var(--font-caption);
+    color: var(--color-text-muted);
+}

@@ -1,0 +1,59 @@
+---
+description: UI Toolkit 约定 — 实现界面与 UI 逻辑时必须遵循
+globs: Assets/UI/**/*.{uxml,uss,tss,cs}
+alwaysApply: true
+---
+
+# UI Toolkit（AntiFraudStorm）
+
+## 技术选型
+
+- 游戏 UI **只用 UI Toolkit**（UXML / USS / C# `UIDocument`），不要新建 uGUI Canvas。
+- Layer Lab 等第三方 Demo 的 uGUI 不要改、不要当模板复制。
+- 运行时绑定用 `UIDocument.rootVisualElement` + `Q<T>("name")`，命名空间 `AntiFraudStorm.UI`。
+
+## 目录
+
+| 路径 | 用途 |
+|------|------|
+| `Assets/UI/Themes/Tokens.uss` | 颜色/间距/字号变量（唯一设计源） |
+| `Assets/UI/Themes/AppTheme.tss` | 主题入口，已挂到 PanelSettings |
+| `Assets/UI/Styles/Common.uss` | 通用 class（`.screen` `.btn` `.panel`） |
+| `Assets/UI/Styles/Animations.uss` | hover/过渡 |
+| `Assets/UI/Documents/` | 整屏 UXML |
+| `Assets/UI/Components/` | 可复用 UXML 片段 |
+| `Assets/UI/Scripts/` | 界面控制器 |
+
+新界面：`Documents/<Name>.uxml` + `Scripts/<Name>Controller.cs`。不要把样式散落到 Documents 旁的随意 USS，优先扩展 Common / Tokens。
+
+## 样式规则
+
+- 颜色、间距、圆角、字号 **必须** `var(--token)`，禁止硬编码 `#hex` / 随意 `px`（Tokens 里没有的先补 Token）。
+- 用 class（BEM）：`btn`、`btn--primary`、`is-disabled`；少用 UXML `style=`。
+- 动效写在 `Animations.uss` 或切换 class；复杂时序再用 C# schedule。
+
+## 控制器模式
+
+```csharp
+[RequireComponent(typeof(UIDocument))]
+public class FooController : MonoBehaviour
+{
+    [SerializeField] UIDocument document;
+    void OnEnable() {
+        var root = document.rootVisualElement;
+        root.Q<Button>("btn-x")?.RegisterCallback<ClickEvent>(...);
+    }
+    void OnDisable() { /* UnregisterCallback 对称解绑 */ }
+}
+```
+
+- UXML 控件 `name` 用 kebab-case（`btn-start`）。
+- 场景里一个全屏一个 `UIDocument`（挂在 `UIRoot`）；弹层可同树切换 class，或另加 Document。
+- PanelSettings 只用 `Assets/UI/PanelSettings.asset`，不要新建第二套。
+
+## 实现新功能时
+
+1. 先改/加 UXML 结构与 name。
+2. 复用或扩展 USS class。
+3. 在 Controller 里绑定事件与状态。
+4. 需要 Unity 侧验证时，优先用 MCP for Unity（刷新资源、查层级、进 Play）。

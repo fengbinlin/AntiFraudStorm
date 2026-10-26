@@ -1,0 +1,29 @@
+/* Interaction / motion. Keep effects here — avoid per-screen one-off transitions. */
+
+.btn--primary:hover {
+    background-color: var(--color-accent-hover);
+    scale: 1.02;
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-surface);
+    border-color: var(--color-accent);
+}
+
+.btn:active {
+    scale: 0.98;
+}
+
+.panel.is-hidden {
+    display: none;
+}
+
+.fade-in {
+    transition-property: opacity;
+    transition-duration: var(--transition-normal);
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}

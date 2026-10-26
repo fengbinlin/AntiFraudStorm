@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="root" class="screen">
+        <ui:VisualElement class="screen__header">
+            <ui:Label name="title" text="AntiFraud Storm" class="screen__title" />
+            <ui:Label name="subtitle" text="识别诈骗套路，守护你的财产安全" class="screen__subtitle" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="menu-panel" class="panel stack">
+            <ui:Button name="btn-start" text="开始挑战" class="btn btn--primary" />
+            <ui:Button name="btn-settings" text="设置" class="btn btn--secondary" />
+            <ui:Button name="btn-quit" text="退出" class="btn btn--secondary" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
