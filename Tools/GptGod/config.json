@@ -1,0 +1,7 @@
+{
+  "apiKey": "sk-sX62smbdiYzStOYZpWiQm8jEVuMFCUak6H0ZFb1yj9hPs7e5",
+  "baseUrl": "https://api.gptgod.online/v1",
+  "defaultModel": "gpt-image-2-vip",
+  "defaultSize": "1024x1024",
+  "outputDir": "Assets/UI/Icons"
+}

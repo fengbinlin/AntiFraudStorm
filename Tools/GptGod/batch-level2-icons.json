@@ -1,0 +1,52 @@
+[
+  {
+    "name": "fraud_tool_01_identity_check",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a friendly identity-verification tool combining a blue ID card, a smartphone, and a small green approval check. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, small warm golden accents, subtle sparkle highlights, friendly and trustworthy. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no text, no letters, no numbers, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_02_card_check",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a bank-card inspection tool with a neat stack of blue payment cards and a large glossy magnifying glass showing a checkmark. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, small warm golden accents, subtle sparkle highlights, friendly and trustworthy. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no text, no letters, no card numbers, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_03_ai_agent",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a cute blue-and-white AI assistant robot head with a friendly digital shield and a small chat bubble. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, small warm golden accents, subtle sparkle highlights, approachable and safe. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no text, no letters, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_04_overseas_call",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a smartphone receiving an international call, paired with a small blue globe and a protective warning badge. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, small warm golden accent, subtle sparkle highlights, clear caution without being alarming. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no text, no phone numbers, no letters, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_05_caller_identity",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: an anti-fraud caller identity card shaped like a small blue business-card badge, combined with a verified shield and telephone handset. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, warm golden badge accent, subtle sparkle highlights, official yet friendly. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no text, no letters, no personal data, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_06_warning_sms",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a warning SMS symbol with a rounded blue message bubble, a small shield, and a golden exclamation mark. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, warm yellow warning accent, subtle sparkle highlights. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no words, no letters, no numbers, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_07_hotline",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a friendly emergency anti-fraud hotline represented by a glossy blue telephone handset, headset, small shield, and warm golden signal waves. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, warm golden accents, subtle sparkle highlights. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no text, no letters, no numbers, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_08_national_app",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a national anti-fraud mobile app represented by a blue smartphone displaying an abstract shield symbol, with a small golden security star. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, warm golden accent, subtle sparkle highlights, trustworthy and friendly. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no words, no letters, no official emblem, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_09_cross_border",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a cross-border service safety tool combining a friendly blue globe, a small smartphone, and a closed golden padlock. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clean white outline, blue and cyan gradient, warm golden accent, subtle sparkle highlights. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no text, no letters, no flags, no logos, no watermark, no shadow on the background."
+  },
+  {
+    "name": "fraud_tool_10_campus_center",
+    "size": "1024x1024",
+    "prompt": "Use case: stylized-concept. Asset type: square game UI icon for an anti-fraud defense game. Primary request: a campus anti-fraud center represented by a cute small blue school building combined with a protective shield and a warm golden warning star. Style: glossy 3D cartoon sticker, polished clay and plastic materials, soft rounded shapes, thick clear white outline, blue and cyan gradient, warm golden accent, subtle sparkle highlights, safe and welcoming. Composition: centered single icon, generous padding, strong readable silhouette, no cropped edges. Background: genuinely transparent. Constraints: no text, no letters, no logos, no watermark, no shadow on the background."
+  }
+]

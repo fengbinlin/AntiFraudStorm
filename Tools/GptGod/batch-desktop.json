@@ -1,0 +1,40 @@
+[
+  {
+    "name": "icon_browser",
+    "prompt": "Game UI app icon, cute flat cartoon web browser window with soft globe, sky blue and white, rounded square tile, soft shadow, no text, no letters, transparent background, 1:1"
+  },
+  {
+    "name": "icon_folder",
+    "prompt": "Game UI app icon, cute flat cartoon yellow folder, soft pastel, rounded square tile style, no text, transparent background, 1:1"
+  },
+  {
+    "name": "icon_notes",
+    "prompt": "Game UI app icon, cute flat cartoon sticky notes pad mint green, rounded square, no text, transparent background, 1:1"
+  },
+  {
+    "name": "icon_mail",
+    "prompt": "Game UI app icon, cute flat cartoon envelope email pink pastel, rounded square, no text, transparent background, 1:1"
+  },
+  {
+    "name": "icon_portal_enroll",
+    "prompt": "Game UI portal tile icon, cute flat cartoon enrollment clipboard with checkmark, teal green, rounded square, no text, transparent background, 1:1"
+  },
+  {
+    "name": "icon_portal_course",
+    "prompt": "Game UI portal tile icon, cute flat cartoon books and calendar for course selection, soft blue, rounded square, no text, transparent background, 1:1"
+  },
+  {
+    "name": "icon_portal_lib",
+    "prompt": "Game UI portal tile icon, cute flat cartoon library books stack, warm pastel, rounded square, no text, transparent background, 1:1"
+  },
+  {
+    "name": "icon_start",
+    "prompt": "Game UI start button icon, cute flat cartoon shield with soft sparkle, anti-fraud theme, sky blue gold accent, circular friendly, no text, transparent background, 1:1"
+  },
+  {
+    "name": "wallpaper_antifraud",
+    "size": "1536x1024",
+    "outDir": "Assets/UI/Wallpapers",
+    "prompt": "Cute soft game desktop wallpaper, anti-fraud education theme for university students, gentle sky blue gradient, soft clouds, distant campus silhouette, subtle shield lock and phishing-awareness motifs as gentle decorations not logos, soft pastel illustration, calm friendly atmosphere, NO text, NO letters, NO watermark, wide 16:9 composition"
+  }
+]

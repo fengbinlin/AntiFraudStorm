@@ -38,7 +38,7 @@ namespace AntiFraudStorm.Player
             _springArm = springArm;
         }
 
-        public void Tick(Vector2 moveInput, bool sprint, bool jumpPressed, float deltaTime)
+        public void Tick(Vector2 moveInput, bool sprint, bool jumpPressed, float deltaTime, bool lockBodyToLookYaw = false)
         {
             if (_controller == null)
                 return;
@@ -46,7 +46,7 @@ namespace AntiFraudStorm.Player
             UpdateGrounding();
             ApplyJump(jumpPressed);
             ApplyGravity(deltaTime);
-            MoveHorizontal(moveInput, sprint, deltaTime);
+            MoveHorizontal(moveInput, sprint, deltaTime, lockBodyToLookYaw);
 
             var motion = _velocity + Vector3.up * _verticalVelocity;
             _controller.Move(motion * deltaTime);
@@ -71,7 +71,7 @@ namespace AntiFraudStorm.Player
             _verticalVelocity += gravity * deltaTime;
         }
 
-        void MoveHorizontal(Vector2 moveInput, bool sprint, float deltaTime)
+        void MoveHorizontal(Vector2 moveInput, bool sprint, float deltaTime, bool lockBodyToLookYaw)
         {
             IsRunning = sprint && moveInput.sqrMagnitude > 0.01f;
             float targetSpeed = moveInput.sqrMagnitude < 0.01f
@@ -81,8 +81,16 @@ namespace AntiFraudStorm.Player
             _currentHorizontalSpeed = Mathf.MoveTowards(
                 _currentHorizontalSpeed, targetSpeed, acceleration * deltaTime);
 
-            Vector3 moveDir = GetCameraRelativeDirection(moveInput);
-            if (moveDir.sqrMagnitude > 0.001f)
+            float yaw = GetPlanarYaw();
+            Vector3 moveDir = GetCameraRelativeDirection(moveInput, yaw);
+
+            if (lockBodyToLookYaw)
+            {
+                var lookRot = Quaternion.Euler(0f, yaw, 0f);
+                transform.rotation = Quaternion.RotateTowards(
+                    transform.rotation, lookRot, rotationSpeed * deltaTime);
+            }
+            else if (moveDir.sqrMagnitude > 0.001f)
             {
                 var targetRot = Quaternion.LookRotation(moveDir, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(
@@ -95,19 +103,19 @@ namespace AntiFraudStorm.Player
                 : 0f;
         }
 
-        Vector3 GetCameraRelativeDirection(Vector2 moveInput)
+        float GetPlanarYaw()
+        {
+            if (_springArm != null)
+                return _springArm.PlanarYaw;
+            if (_camera != null)
+                return _camera.eulerAngles.y;
+            return transform.eulerAngles.y;
+        }
+
+        Vector3 GetCameraRelativeDirection(Vector2 moveInput, float yaw)
         {
             if (moveInput.sqrMagnitude < 0.0001f)
                 return Vector3.zero;
-
-            // Prefer spring-arm yaw (same as orbit). Fallback to camera / self.
-            float yaw;
-            if (_springArm != null)
-                yaw = _springArm.PlanarYaw;
-            else if (_camera != null)
-                yaw = _camera.eulerAngles.y;
-            else
-                yaw = transform.eulerAngles.y;
 
             Vector3 world = Quaternion.Euler(0f, yaw, 0f) * new Vector3(moveInput.x, 0f, moveInput.y);
             return world.normalized;

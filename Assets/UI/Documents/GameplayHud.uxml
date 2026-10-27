@@ -1,0 +1,88 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="root" class="hud" picking-mode="Ignore">
+        <ui:VisualElement name="top" class="hud__top" picking-mode="Ignore">
+            <ui:VisualElement name="left-rail" class="hud__left" picking-mode="Ignore">
+                <ui:VisualElement name="currency" class="hud__currency" picking-mode="Ignore">
+                    <ui:VisualElement name="coin-icon" class="hud__coin" picking-mode="Ignore" />
+                    <ui:Label name="coin-amount" text="0" class="hud__coin-amount hud-text" picking-mode="Ignore" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="quest-spacer" class="hud__quest-spacer" picking-mode="Ignore" />
+
+                <ui:VisualElement name="quest-bar" class="hud__quest" picking-mode="Ignore">
+                    <ui:VisualElement name="quest-marker" class="hud__quest-marker" picking-mode="Ignore">
+                        <ui:VisualElement name="img-quest-marker" class="hud__quest-marker-icon" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="quest-body" class="hud__quest-body" picking-mode="Ignore">
+                        <ui:VisualElement class="hud__quest-row" picking-mode="Ignore">
+                            <ui:Label name="quest-tag" text="主线" class="hud__quest-tag hud-text" picking-mode="Ignore" />
+                            <ui:Label name="quest-title" text="办理入学注册" class="hud__quest-title hud-text" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                        <ui:Label name="quest-distance" text="500m" class="hud__quest-distance" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="actions" class="hud__actions" picking-mode="Ignore">
+                <ui:Button name="btn-map" text="" class="hud-icon-btn" tooltip="地图">
+                    <ui:VisualElement name="icon-map" class="hud-icon-btn__disc">
+                        <ui:VisualElement name="img-map" class="hud-icon-btn__icon" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="地图" class="hud-icon-btn__caption hud-text" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-ai" text="" class="hud-icon-btn" tooltip="AI">
+                    <ui:VisualElement name="icon-ai" class="hud-icon-btn__disc">
+                        <ui:VisualElement name="img-ai" class="hud-icon-btn__icon" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="AI" class="hud-icon-btn__caption hud-text" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-phone" text="" class="hud-icon-btn" tooltip="手机">
+                    <ui:VisualElement name="icon-phone" class="hud-icon-btn__disc">
+                        <ui:VisualElement name="img-phone" class="hud-icon-btn__icon" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="手机" class="hud-icon-btn__caption hud-text" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-log" text="" class="hud-icon-btn" tooltip="日志">
+                    <ui:VisualElement name="icon-log" class="hud-icon-btn__disc">
+                        <ui:VisualElement name="img-log" class="hud-icon-btn__icon" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="日志" class="hud-icon-btn__caption hud-text" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btn-settings" text="" class="hud-icon-btn" tooltip="设置">
+                    <ui:VisualElement name="icon-settings" class="hud-icon-btn__disc">
+                        <ui:VisualElement name="img-settings" class="hud-icon-btn__icon" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="设置" class="hud-icon-btn__caption hud-text" picking-mode="Ignore" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="anti-fraud-journal" class="journal is-hidden">
+            <ui:VisualElement class="journal__book-image">
+                <ui:Button name="btn-journal-close" text="关闭" class="journal__close" />
+
+                <ui:VisualElement name="journal-left-page" class="journal__page-slot journal__page-slot--left">
+                    <ui:Label name="journal-left-empty" text="尚未记录反诈日志&#10;靠近传单，按 C 进入相机后拍摄" class="journal__empty" picking-mode="Ignore" />
+                    <ui:VisualElement name="journal-left-entry" class="journal-captured-entry is-hidden">
+                        <ui:Label name="journal-left-title" text="" class="journal-captured-entry__title journal-reveal-item" picking-mode="Ignore" />
+                        <ui:VisualElement name="journal-left-photo" class="journal-captured-entry__photo journal-reveal-item" picking-mode="Ignore" />
+                        <ui:Label name="journal-left-summary" text="" class="journal-captured-entry__summary journal-reveal-item" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="journal-right-page" class="journal__page-slot journal__page-slot--right">
+                    <ui:Label name="journal-right-empty" text="等待另一份证据&#10;继续探索校园中的可疑传单" class="journal__empty" picking-mode="Ignore" />
+                    <ui:VisualElement name="journal-right-entry" class="journal-captured-entry is-hidden">
+                        <ui:Label name="journal-right-title" text="" class="journal-captured-entry__title journal-reveal-item" picking-mode="Ignore" />
+                        <ui:VisualElement name="journal-right-photo" class="journal-captured-entry__photo journal-reveal-item" picking-mode="Ignore" />
+                        <ui:Label name="journal-right-summary" text="" class="journal-captured-entry__summary journal-reveal-item" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:Button name="btn-journal-prev" text="上一页" class="journal__page-nav journal__page-nav--prev" />
+                <ui:Label name="journal-page-indicator" text="" class="journal__page-indicator" picking-mode="Ignore" />
+                <ui:Button name="btn-journal-next" text="下一页" class="journal__page-nav journal__page-nav--next" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

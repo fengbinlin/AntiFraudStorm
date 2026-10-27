@@ -17,8 +17,26 @@ namespace AntiFraudStorm.Player
         [SerializeField] CharacterController characterController;
         [SerializeField] AnimancerComponent animancer;
         [SerializeField] Transform cameraTransform;
+        [SerializeField] PlayerHandheldCamera handheldCamera;
 
         bool _jumpPressed;
+
+        public Camera GameplayCamera
+        {
+            get
+            {
+                if (cameraTransform != null)
+                {
+                    Camera camera = cameraTransform.GetComponent<Camera>();
+                    if (camera != null)
+                        return camera;
+                }
+
+                return springArm != null
+                    ? springArm.GetComponentInChildren<Camera>(true)
+                    : null;
+            }
+        }
 
         void Awake()
         {
@@ -28,7 +46,6 @@ namespace AntiFraudStorm.Player
 
         void Update()
         {
-            // Jump is edge-triggered — sample in Update before LateUpdate consumes it.
             if (input != null)
                 _jumpPressed = input.JumpPressed;
         }
@@ -38,14 +55,28 @@ namespace AntiFraudStorm.Player
             if (input == null)
                 return;
 
-            // Camera first, then move — so W aligns to the current look yaw this frame.
+            if (AntiFraudStorm.SceneFlow.CampusComputerSession.IsFrozen)
+            {
+                _jumpPressed = false;
+                return;
+            }
+
+            if (input.PropCameraPressed)
+                handheldCamera?.TryToggle();
+            else if (input.CycleCameraPressed &&
+                     (handheldCamera == null || (!handheldCamera.IsHolding && !handheldCamera.IsBusy)))
+                springArm?.CycleMode();
+
             springArm?.Tick(input.Look, Time.deltaTime);
 
             if (motor != null)
             {
-                motor.Tick(input.Move, input.Sprint, _jumpPressed, Time.deltaTime);
+                bool lockBody = springArm != null && springArm.LockBodyToLookYaw;
+                bool busy = handheldCamera != null && handheldCamera.IsBusy;
+                Vector2 move = busy ? Vector2.zero : input.Move;
+                motor.Tick(move, busy ? false : input.Sprint, busy ? false : _jumpPressed, Time.deltaTime, lockBody);
                 bool isMoving = motor.HorizontalVelocity.sqrMagnitude > 0.01f;
-                locomotion?.Tick(isMoving, motor.IsRunning, motor.IsGrounded, _jumpPressed);
+                locomotion?.Tick(isMoving, motor.IsRunning, motor.IsGrounded, busy ? false : _jumpPressed);
             }
 
             _jumpPressed = false;
@@ -65,11 +96,18 @@ namespace AntiFraudStorm.Player
                 locomotion = GetComponentInChildren<PlayerAnimancerLocomotion>();
             if (springArm == null)
                 springArm = GetComponentInChildren<ThirdPersonSpringArm>(true);
+            if (handheldCamera == null)
+                handheldCamera = GetComponent<PlayerHandheldCamera>();
             if (cameraTransform == null)
             {
-                var cam = GetComponentInChildren<Camera>(true);
-                if (cam != null)
-                    cameraTransform = cam.transform;
+                if (springArm != null)
+                {
+                    var rigCam = springArm.GetComponentInChildren<Camera>(true);
+                    if (rigCam != null)
+                        cameraTransform = rigCam.transform;
+                }
+                if (cameraTransform == null && Camera.main != null)
+                    cameraTransform = Camera.main.transform;
             }
         }
 
@@ -79,14 +117,10 @@ namespace AntiFraudStorm.Player
             {
                 var cam = cameraTransform != null
                     ? cameraTransform
-                    : GetComponentInChildren<Camera>(true)?.transform;
+                    : springArm.GetComponentInChildren<Camera>(true)?.transform;
 
-                // Prefab keeps CameraRig under Player for convenience; detach at runtime
-                // so player yaw does not twist the orbit arm.
                 if (springArm.transform.parent == transform)
-                {
                     springArm.transform.SetParent(null, true);
-                }
 
                 springArm.Initialize(transform, cam);
                 cameraTransform = cam;
@@ -97,6 +131,10 @@ namespace AntiFraudStorm.Player
 
             if (locomotion != null && animancer != null)
                 locomotion.Initialize(animancer);
+
+            if (handheldCamera == null)
+                handheldCamera = gameObject.AddComponent<PlayerHandheldCamera>();
+            handheldCamera.Initialize(animancer, springArm, locomotion);
         }
 
 #if UNITY_EDITOR

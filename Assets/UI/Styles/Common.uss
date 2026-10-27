@@ -95,3 +95,464 @@
     font-size: var(--font-caption);
     color: var(--color-text-muted);
 }
+
+/* Fullscreen handheld camera viewfinder overlay (transparent center). */
+.viewfinder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    background-color: var(--color-transparent);
+}
+
+.viewfinder.is-hidden {
+    display: none;
+}
+
+.viewfinder__frame {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.viewfinder__flash {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    opacity: 0;
+}
+
+.viewfinder__flash.is-hidden {
+    display: none;
+}
+
+/* Third-person gameplay HUD */
+.hud {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    background-color: var(--color-transparent);
+    padding-top: var(--space-md);
+    padding-left: var(--space-lg);
+    padding-right: var(--space-lg);
+}
+
+.hud.is-hidden {
+    display: none;
+}
+
+.hud-text,
+.hud Label {
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/MaokenZhuyuanTi.asset");
+    color: var(--color-hud-text);
+    -unity-text-outline-width: 0;
+    -unity-font-style: normal;
+}
+
+.hud__top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.hud__left {
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 780px;
+}
+
+.hud__currency {
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--color-transparent);
+    border-width: 0;
+    padding: 0;
+    min-height: var(--size-hud-coin);
+    margin-bottom: 0;
+}
+
+.hud__coin {
+    width: var(--size-hud-coin);
+    height: var(--size-hud-coin);
+    margin-right: var(--space-md);
+    border-width: 0;
+    background-color: var(--color-transparent);
+    -unity-background-scale-mode: scale-to-fit;
+    flex-shrink: 0;
+}
+
+.hud__coin-amount {
+    font-size: var(--font-hud-coin);
+    -unity-text-align: middle-left;
+    margin: 0;
+    padding: 0;
+}
+
+.hud__quest-spacer {
+    width: 100%;
+    height: var(--space-hud-quest-gap);
+    min-height: var(--space-hud-quest-gap);
+    flex-shrink: 0;
+    background-color: var(--color-transparent);
+}
+
+.hud__quest {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    min-width: 460px;
+    background-color: rgba(11, 31, 52, 0.58);
+    border-width: 1px;
+    border-color: rgba(212, 232, 255, 0.42);
+    border-radius: 20px;
+    padding: 12px 18px 12px 12px;
+    margin-top: 0;
+    transition-property: scale;
+    transition-duration: 0.14s;
+}
+
+.hud__quest.is-hidden {
+    display: none;
+}
+
+.hud__quest.is-urgent {
+    scale: 1.075;
+}
+
+.hud__quest-marker {
+    width: 72px;
+    height: 72px;
+    border-width: 0;
+    border-radius: 0;
+    margin-right: var(--space-md);
+    background-color: var(--color-transparent);
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.hud__quest-marker-icon {
+    width: 72px;
+    height: 72px;
+    background-color: var(--color-transparent);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.hud__quest-body {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.hud__quest-row {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: var(--space-xs);
+}
+
+.hud__quest-tag {
+    font-size: 32px;
+    -unity-text-align: middle-center;
+    background-color: var(--color-hud-cyan-deep);
+    border-radius: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-right: 14px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.hud__quest-title {
+    font-size: 36px;
+    -unity-text-align: middle-left;
+    white-space: normal;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.hud__quest-distance {
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/MaokenZhuyuanTi.asset");
+    font-size: 34px;
+    color: var(--color-hud-cyan);
+    -unity-text-outline-width: 0;
+    -unity-text-align: middle-left;
+    margin: 0;
+    padding: 0;
+}
+
+.hud__actions {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.hud-icon-btn {
+    width: 120px;
+    height: 148px;
+    margin-left: var(--space-md);
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: var(--color-transparent);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition-property: scale, opacity;
+    transition-duration: var(--transition-fast);
+}
+
+.hud-icon-btn:hover {
+    scale: 1.06;
+}
+
+.hud-icon-btn:active {
+    scale: 0.96;
+}
+
+.hud-icon-btn__disc {
+    width: var(--size-hud-action);
+    height: var(--size-hud-action);
+    border-radius: var(--radius-xl);
+    border-width: 1px;
+    border-color: var(--color-hud-cyan-soft);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-sm);
+    overflow: hidden;
+}
+
+.hud-icon-btn__icon {
+    width: var(--size-hud-action-icon);
+    height: var(--size-hud-action-icon);
+    background-color: var(--color-transparent);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.hud-icon-btn__caption {
+    font-size: var(--font-hud-body);
+    -unity-text-align: middle-center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Double-page evidence journal, using the supplied notebook artwork directly. */
+.journal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+    background-color: rgba(6, 16, 31, 0.82);
+}
+
+.journal.is-hidden {
+    display: none;
+}
+
+.journal__book-image {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    max-width: 1500px;
+    max-height: 844px;
+    flex-shrink: 0;
+    background-image: url("project://database/Assets/日志本.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.journal Button.journal__close {
+    position: absolute;
+    right: 1.2%;
+    top: 1.1%;
+    width: 92px;
+    height: 44px;
+    padding: 0;
+    border-width: 2px;
+    border-color: #ffffff;
+    border-radius: 20px;
+    background-color: rgba(40, 132, 222, 0.94);
+    color: #ffffff;
+    font-size: 20px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    transition-property: scale, background-color;
+    transition-duration: 0.12s;
+}
+
+.journal Button {
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/MaokenZhuyuanTi.asset");
+}
+
+.journal Button.journal__close:hover {
+    scale: 1.06;
+    background-color: #1672ca;
+}
+
+.journal__page-slot {
+    position: absolute;
+    top: 12%;
+    height: 73%;
+    padding: 8px 4px;
+}
+
+.journal__page-slot--left {
+    left: 13.8%;
+    width: 35.8%;
+}
+
+.journal__page-slot--right {
+    left: 54.2%;
+    width: 32.8%;
+}
+
+.journal .journal__empty {
+    position: absolute;
+    left: 7%;
+    right: 7%;
+    top: 38%;
+    padding: 22px 18px;
+    border-radius: 18px;
+    border-width: 1px;
+    border-color: rgba(128, 177, 218, 0.45);
+    background-color: rgba(255, 255, 255, 0.86);
+    color: #6d8fac;
+    font-size: 23px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.journal__empty.is-hidden,
+.journal-captured-entry.is-hidden {
+    display: none;
+}
+
+.journal-captured-entry {
+    position: absolute;
+    left: 6%;
+    right: 6%;
+    top: 7%;
+    bottom: 3%;
+    flex-direction: column;
+    opacity: 1;
+    scale: 1;
+}
+
+.journal .journal-reveal-item {
+    opacity: 1;
+    scale: 1;
+    transition-property: opacity, scale;
+    transition-duration: 0.34s;
+}
+
+.journal .journal-reveal-item.is-reveal-waiting {
+    opacity: 0;
+    scale: 0.96;
+    transition-duration: 0s;
+}
+
+.journal .journal-captured-entry__title {
+    height: 42px;
+    flex-shrink: 0;
+    margin: 0 0 6px 0;
+    color: #2d689a;
+    font-size: 29px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+}
+
+.journal-captured-entry__photo {
+    width: 100%;
+    height: 310px;
+    flex-shrink: 0;
+    margin-bottom: 8px;
+    border-width: 2px;
+    border-color: rgba(104, 164, 208, 0.5);
+    border-radius: 12px;
+    background-color: rgba(238, 246, 252, 0.8);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.journal .journal-captured-entry__summary {
+    flex-grow: 1;
+    margin: 0;
+    padding: 6px 8px;
+    color: #385c76;
+    font-size: 21px;
+    white-space: normal;
+    -unity-text-align: upper-left;
+}
+
+.journal Button.journal__page-nav {
+    position: absolute;
+    bottom: 1.2%;
+    width: 104px;
+    height: 38px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.8);
+    border-radius: 18px;
+    background-color: rgba(36, 127, 216, 0.9);
+    color: #ffffff;
+    font-size: 17px;
+    -unity-text-align: middle-center;
+    transition-property: scale, opacity;
+    transition-duration: 0.12s;
+}
+
+.journal Button.journal__page-nav:hover {
+    scale: 1.06;
+}
+
+.journal Button.journal__page-nav:disabled {
+    opacity: 0.35;
+}
+
+.journal__page-nav--prev {
+    left: 39%;
+}
+
+.journal__page-nav--next {
+    right: 39%;
+}
+
+.journal .journal__page-indicator {
+    position: absolute;
+    left: 46%;
+    right: 46%;
+    bottom: 1.9%;
+    color: #ffffff;
+    font-size: 18px;
+    -unity-text-align: middle-center;
+}
+
+.hud-icon-btn.has-new-evidence .hud-icon-btn__disc {
+    border-width: 4px;
+    border-color: #ffe270;
+    background-color: rgba(255, 198, 48, 0.24);
+    transition-property: scale, border-color, background-color;
+    transition-duration: 0.13s;
+}
+
+.hud-icon-btn.has-new-evidence.is-bouncing .hud-icon-btn__disc {
+    scale: 1.22;
+}

@@ -1,4 +1,4 @@
-using Animancer;
+﻿using Animancer;
 using UnityEngine;
 
 namespace AntiFraudStorm.Player
@@ -32,8 +32,25 @@ namespace AntiFraudStorm.Player
         LocoState _state = LocoState.Idle;
         AnimancerState _current;
         AnimancerState _jumpState;
+        bool _actionBusy;
 
         public bool IsJumping => _state == LocoState.Jump;
+        public bool IsActionBusy => _actionBusy;
+
+        public void NotifyActionBusy(bool busy)
+        {
+            _actionBusy = busy;
+        }
+
+        public void NotifyActionStarted()
+        {
+            NotifyActionBusy(true);
+        }
+
+        public void NotifyActionEnded()
+        {
+            NotifyActionBusy(false);
+        }
 
         public void Initialize(AnimancerComponent animancerComponent)
         {
@@ -52,6 +69,10 @@ namespace AntiFraudStorm.Player
         public void Tick(bool isMoving, bool isRunning, bool isGrounded, bool jumpPressed)
         {
             if (animancer == null)
+                return;
+
+            // Prop / interaction clips are driven externally.
+            if (_actionBusy)
                 return;
 
             if (_state != LocoState.Jump && jumpPressed && isGrounded && jumpClip != null)

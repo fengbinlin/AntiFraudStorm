@@ -1,0 +1,358 @@
+fileFormatVersion: 2
+guid: cfd21d888b3379146b2c8b494def727b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7777273624347461287
+    second: HexagonShadow01_0
+  - first:
+      213: -1471725009027729113
+    second: HexagonShadow01_2
+  - first:
+      213: -888336855461177982
+    second: HexagonShadow01_3
+  - first:
+      213: 5128057760293893461
+    second: HexagonShadow01_4
+  - first:
+      213: -2737647229005251571
+    second: HexagonShadow01_5
+  - first:
+      213: 5565611469007920750
+    second: HexagonShadow01_6
+  - first:
+      213: 6794201378026663287
+    second: HexagonShadow01_7
+  - first:
+      213: -3086429022269217303
+    second: HexagonShadow01_8
+  - first:
+      213: -8436941976516511087
+    second: HexagonShadow01_9
+  - first:
+      213: -5915061071895622519
+    second: HexagonShadow01_10
+  - first:
+      213: -5162633661343604271
+    second: HexagonShadow01_11
+  - first:
+      213: 3463504971330263247
+    second: HexagonShadow01_12
+  - first:
+      213: -6314069548553841055
+    second: HexagonShadow01_13
+  - first:
+      213: 147997464494488760
+    second: HexagonShadow01_14
+  - first:
+      213: -8400043556321373565
+    second: HexagonShadow01_15
+  - first:
+      213: -6979930349188408047
+    second: HexagonShadow01_16
+  - first:
+      213: -4786675600788322112
+    second: HexagonShadow01_17
+  - first:
+      213: 4097852764357899924
+    second: HexagonShadow01_18
+  - first:
+      213: -3825869015459625941
+    second: HexagonShadow01_19
+  - first:
+      213: 5160684579764499535
+    second: HexagonShadow01_20
+  - first:
+      213: 6833823280959758612
+    second: HexagonShadow01_21
+  - first:
+      213: 1721720699152493026
+    second: HexagonShadow01_22
+  - first:
+      213: -4481910195534463787
+    second: HexagonShadow01_23
+  - first:
+      213: 7987391726095121873
+    second: HexagonShadow01_24
+  - first:
+      213: 3078898154112712542
+    second: HexagonShadow01_25
+  - first:
+      213: -7376008352900336074
+    second: HexagonShadow01_26
+  - first:
+      213: -8363790798367639106
+    second: HexagonShadow01_27
+  - first:
+      213: -1580534610673190194
+    second: HexagonShadow01_28
+  - first:
+      213: 8314046481401840682
+    second: HexagonShadow01_29
+  - first:
+      213: -7920125698531982197
+    second: HexagonShadow01_30
+  - first:
+      213: 462659575189857112
+    second: HexagonShadow01_31
+  - first:
+      213: -7174104735288644004
+    second: HexagonShadow01_32
+  - first:
+      213: -4361924446897597259
+    second: HexagonShadow01_33
+  - first:
+      213: -1551171222534009897
+    second: HexagonShadow01_34
+  - first:
+      213: -6237474737050316107
+    second: HexagonShadow01_35
+  - first:
+      213: -7000498465165065773
+    second: HexagonShadow01_36
+  - first:
+      213: 8441413612176245680
+    second: HexagonShadow01_37
+  - first:
+      213: 7601834193367768807
+    second: HexagonShadow01_38
+  - first:
+      213: 3385016645949043087
+    second: HexagonShadow01_39
+  - first:
+      213: 3130667352283828385
+    second: HexagonShadow01_40
+  - first:
+      213: -7306624474211086297
+    second: HexagonShadow01_41
+  - first:
+      213: 4918057459472060960
+    second: HexagonShadow01_42
+  - first:
+      213: -7224850292941533196
+    second: HexagonShadow01_43
+  - first:
+      213: -9052826247682761436
+    second: HexagonShadow01_44
+  - first:
+      213: -4834115714377342240
+    second: HexagonShadow01_45
+  - first:
+      213: 4286360053494776090
+    second: HexagonShadow01_46
+  - first:
+      213: 6088147075038477757
+    second: HexagonShadow01_47
+  - first:
+      213: 1883894883734617307
+    second: HexagonShadow01_48
+  - first:
+      213: -5138399272153708287
+    second: HexagonShadow01_49
+  - first:
+      213: 3069739321290768841
+    second: HexagonShadow01_50
+  - first:
+      213: -5800832394155339519
+    second: HexagonShadow01_51
+  - first:
+      213: 1470134499054234371
+    second: HexagonShadow01_52
+  - first:
+      213: 1561377350053849888
+    second: HexagonShadow01_53
+  - first:
+      213: 4246137357719596728
+    second: HexagonShadow01_54
+  - first:
+      213: -4263807842093889976
+    second: HexagonShadow01_1
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HexagonShadow01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 512
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6ce34d72d6eeb60800000000000000
+      internalID: 7777273624347461287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexagonShadow01_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 512
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729f7ddd6e1639be0800000000000000
+      internalID: -1471725009027729113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HexagonShadow01_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 172
+        width: 512
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8460875bb59e3d4c0800000000000000
+      internalID: -4263807842093889976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HexagonShadow01_0: 7777273624347461287
+      HexagonShadow01_1: -4263807842093889976
+      HexagonShadow01_2: -1471725009027729113
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

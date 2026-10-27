@@ -1,0 +1,324 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="desk" class="desk">
+        <ui:VisualElement name="wallpaper" class="desk__wallpaper" picking-mode="Ignore" />
+
+        <ui:VisualElement name="icons" class="desk__icons">
+            <ui:Button name="icon-browser" class="desk-icon" tooltip="反诈浏览器">
+                <ui:VisualElement class="desk-icon__tile desk-icon__tile--browser" picking-mode="Ignore" />
+                <ui:Label text="反诈浏览器" class="desk-icon__caption" picking-mode="Ignore" />
+            </ui:Button>
+            <ui:Button name="icon-folder" class="desk-icon" tooltip="我的文件">
+                <ui:VisualElement class="desk-icon__tile desk-icon__tile--folder" picking-mode="Ignore" />
+                <ui:Label text="我的文件" class="desk-icon__caption" picking-mode="Ignore" />
+            </ui:Button>
+            <ui:Button name="icon-notes" class="desk-icon" tooltip="便签">
+                <ui:VisualElement class="desk-icon__tile desk-icon__tile--notes" picking-mode="Ignore" />
+                <ui:Label text="便签" class="desk-icon__caption" picking-mode="Ignore" />
+            </ui:Button>
+            <ui:Button name="icon-mail" class="desk-icon" tooltip="邮箱">
+                <ui:VisualElement class="desk-icon__tile desk-icon__tile--mail" picking-mode="Ignore" />
+                <ui:Label text="校园邮箱" class="desk-icon__caption" picking-mode="Ignore" />
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:Button name="btn-exit-desk" text="返回校园" class="desk__exit" />
+
+        <ui:VisualElement name="browser-window" class="win is-hidden">
+            <ui:VisualElement class="win__chrome">
+                <ui:VisualElement class="win__titlebar">
+                    <ui:VisualElement class="win__traffic" picking-mode="Ignore">
+                        <ui:VisualElement class="win__dot win__dot--close" picking-mode="Ignore" />
+                        <ui:VisualElement class="win__dot win__dot--min" picking-mode="Ignore" />
+                        <ui:VisualElement class="win__dot win__dot--max" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label name="browser-title" text="反诈浏览器" class="win__title" picking-mode="Ignore" />
+                    <ui:Button name="btn-browser-close" text="×" class="win__close" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="win__tabs">
+                    <ui:Button name="tab-main" text="新标签页" class="win__tab is-active" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="win__nav">
+                    <ui:Button name="btn-back" text="←" class="win__nav-btn" />
+                    <ui:Button name="url-dropdown-button" text="（请选择网址）" class="win__url" />
+                    <ui:Button name="btn-go" text="前往" class="win__go" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="browser-body" class="win__body">
+                <!-- New tab -->
+                <ui:VisualElement name="page-blank" class="page page-blank">
+                    <ui:VisualElement class="page-blank__card" picking-mode="Ignore">
+                        <ui:Label text="欢迎使用反诈浏览器" class="page__hero" picking-mode="Ignore" />
+                        <ui:Label text="请在上方地址栏下拉列表中选择网址，再点「前往」。&#10;注意辨别仿冒域名哦～" class="page__sub" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- School portal -->
+                <ui:VisualElement name="page-school" class="page page-school is-hidden">
+                    <ui:VisualElement class="portal">
+                        <ui:VisualElement class="portal__hero" picking-mode="Ignore">
+                            <ui:Label text="BLUE HARBOR UNIVERSITY" class="portal__kicker" picking-mode="Ignore" />
+                            <ui:Label text="蓝湾大学 数字校园" class="portal__title" picking-mode="Ignore" />
+                            <ui:Label text="新生事务 · 教务服务 · 官方认证站点" class="portal__lead" picking-mode="Ignore" />
+                            <ui:VisualElement class="portal__badge" picking-mode="Ignore">
+                                <ui:Label text="官方域名  www.blueharbor.edu.cn" class="portal__badge-text" picking-mode="Ignore" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+
+                        <ui:Label text="常用服务" class="portal__section" picking-mode="Ignore" />
+                        <ui:VisualElement class="page__apps">
+                            <ui:Button name="app-enroll" class="portal-app portal-app--enroll">
+                                <ui:VisualElement class="portal-app__icon portal-app__icon--enroll" picking-mode="Ignore" />
+                                <ui:Label text="开学注册" class="portal-app__label" picking-mode="Ignore" />
+                                <ui:Label text="核验学号 · 邮箱认证 · 缴纳学费" class="portal-app__desc" picking-mode="Ignore" />
+                                <ui:Label text="立即办理" class="portal-app__cta" picking-mode="Ignore" />
+                            </ui:Button>
+                            <ui:Button name="app-course" class="portal-app portal-app--mute">
+                                <ui:VisualElement class="portal-app__icon portal-app__icon--course" picking-mode="Ignore" />
+                                <ui:Label text="选课中心" class="portal-app__label" picking-mode="Ignore" />
+                                <ui:Label text="注册完成后开放" class="portal-app__desc" picking-mode="Ignore" />
+                            </ui:Button>
+                            <ui:Button name="app-lib" class="portal-app portal-app--mute">
+                                <ui:VisualElement class="portal-app__icon portal-app__icon--lib" picking-mode="Ignore" />
+                                <ui:Label text="图书馆" class="portal-app__label" picking-mode="Ignore" />
+                                <ui:Label text="馆藏检索与座位预约" class="portal-app__desc" picking-mode="Ignore" />
+                            </ui:Button>
+                        </ui:VisualElement>
+
+                        <ui:Label text="安全提示：请勿在非官方域名登录或缴费。遇到索要验证码、转账的页面请立即返回。" class="portal__foot" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- Phishing decoy -->
+                <ui:VisualElement name="page-phish" class="page page-phish is-hidden">
+                    <ui:VisualElement class="page-phish__card">
+                        <ui:VisualElement class="page-phish__badge" picking-mode="Ignore">
+                            <ui:VisualElement class="page-phish__icon" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                        <ui:Label text="危险网址已拦截" class="page-phish__eyebrow" picking-mode="Ignore" />
+                        <ui:Label text="站点安全提示" class="page-phish__title" picking-mode="Ignore" />
+                        <ui:Label name="phish-msg" text="" class="page-phish__message" picking-mode="Ignore" />
+                        <ui:VisualElement class="page-phish__tips" picking-mode="Ignore">
+                            <ui:Label text="不要输入账号、密码、验证码或支付信息" class="page-phish__tip" picking-mode="Ignore" />
+                        </ui:VisualElement>
+                        <ui:Button name="btn-phish-back" text="立即返回并重新选择网址" class="desk-btn page-phish__back" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <!-- Enrollment wizard -->
+                <ui:VisualElement name="page-enroll-intro" class="page page-enroll-intro is-hidden">
+                    <ui:VisualElement class="enroll-intro-card">
+                        <ui:VisualElement class="enroll-intro-card__icon" picking-mode="Ignore" />
+                        <ui:Label text="新生 3D 注册闯关" class="enroll-intro-card__title" picking-mode="Ignore" />
+                        <ui:Label text="操控主角越过平台、避开巡逻敌人，抵达终点后继续完成新生注册。" class="enroll-intro-card__description" picking-mode="Ignore" />
+                        <ui:Label text="A / D 左右移动    空格跳跃" class="enroll-intro-card__controls" picking-mode="Ignore" />
+                        <ui:Button name="btn-enroll-start" text="开始" class="desk-btn enroll-intro-card__start" />
+                        <ui:Button name="btn-enroll-intro-back" text="返回" class="desk-btn desk-btn--ghost enroll-intro-card__back" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+
+                <ui:VisualElement name="page-enroll" class="page is-hidden">
+                    <ui:VisualElement class="wizard">
+                        <ui:Label text="开学注册" class="page__hero" picking-mode="Ignore" />
+                        <ui:VisualElement class="wizard__steps" picking-mode="Ignore">
+                            <ui:Label name="chip-id" text="1 学号" class="wizard__chip is-active" picking-mode="Ignore" />
+                            <ui:Label name="chip-mail" text="2 邮箱" class="wizard__chip" picking-mode="Ignore" />
+                            <ui:Label name="chip-pay" text="3 缴费" class="wizard__chip" picking-mode="Ignore" />
+                            <ui:Label name="chip-done" text="4 完成" class="wizard__chip" picking-mode="Ignore" />
+                        </ui:VisualElement>
+
+                        <ui:VisualElement name="step-id" class="wizard__panel">
+                            <ui:Label text="请输入录取通知书上的 10 位学号" class="wizard__label" picking-mode="Ignore" />
+                            <ui:TextField name="field-student-id" class="wizard__field" max-length="10" />
+                            <ui:Label name="msg-id" text="示例：2026090101" class="wizard__msg" picking-mode="Ignore" />
+                            <ui:VisualElement class="wizard__actions">
+                                <ui:Button name="btn-id-next" text="下一步" class="desk-btn" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+
+                        <ui:VisualElement name="step-mail" class="wizard__panel is-hidden">
+                            <ui:Label text="验证校园邮箱" class="wizard__label" picking-mode="Ignore" />
+                            <ui:Label name="mail-address" text="邮箱：—" class="wizard__msg" picking-mode="Ignore" />
+                            <ui:Button name="btn-send-code" text="发送验证码" class="desk-btn desk-btn--ghost" />
+                            <ui:Label text="请输入邮箱收到的 4 位验证码" class="wizard__label" picking-mode="Ignore" />
+                            <ui:TextField name="field-mail-code" class="wizard__field" max-length="4" />
+                            <ui:Label name="msg-mail" text="" class="wizard__msg" picking-mode="Ignore" />
+                            <ui:VisualElement class="wizard__actions">
+                                <ui:Button name="btn-mail-back" text="上一步" class="desk-btn desk-btn--ghost" />
+                                <ui:Button name="btn-mail-next" text="下一步" class="desk-btn" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+
+                        <ui:VisualElement name="step-pay" class="wizard__panel is-hidden">
+                            <ui:Label text="缴纳学费" class="wizard__label" picking-mode="Ignore" />
+                            <ui:VisualElement class="pay-card" picking-mode="Ignore">
+                                <ui:VisualElement class="pay-card__row" picking-mode="Ignore">
+                                    <ui:Label text="项目" picking-mode="Ignore" />
+                                    <ui:Label text="2026 秋季学费" picking-mode="Ignore" />
+                                </ui:VisualElement>
+                                <ui:VisualElement class="pay-card__row" picking-mode="Ignore">
+                                    <ui:Label text="校园卡余额" picking-mode="Ignore" />
+                                    <ui:Label name="card-balance" text="¥12800.00" picking-mode="Ignore" />
+                                </ui:VisualElement>
+                                <ui:Label text="¥6800.00" class="pay-card__amount" picking-mode="Ignore" />
+                            </ui:VisualElement>
+                            <ui:Label name="msg-pay" text="将使用校园卡余额支付，请确认后提交。" class="wizard__msg" picking-mode="Ignore" />
+                            <ui:VisualElement class="wizard__actions">
+                                <ui:Button name="btn-pay-back" text="上一步" class="desk-btn desk-btn--ghost" />
+                                <ui:Button name="btn-pay" text="确认缴费" class="desk-btn desk-btn--ok" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+
+                        <ui:VisualElement name="step-done" class="wizard__panel is-hidden">
+                            <ui:VisualElement class="done-card" picking-mode="Ignore">
+                                <ui:VisualElement class="done-card__badge" picking-mode="Ignore">
+                                    <ui:Label text="✓" picking-mode="Ignore" />
+                                </ui:VisualElement>
+                                <ui:Label text="注册成功！" class="page__hero" picking-mode="Ignore" />
+                                <ui:Label name="done-detail" text="欢迎成为蓝湾大学的一员。" class="page__sub" picking-mode="Ignore" />
+                                <ui:Button name="btn-finish" text="返回校园" class="desk-btn desk-btn--ok" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="taskbar" class="desk__taskbar">
+            <ui:Button name="btn-start" text="" class="desk__start" />
+            <ui:Button name="task-browser" text="反诈浏览器" class="desk__task-slot is-hidden" />
+            <ui:Label name="clock" text="09:30" class="desk__clock" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="desk-hint-bar" class="desk__hint-bar" picking-mode="Ignore">
+            <ui:Label name="desk-hint" text="提示：打开浏览器，从地址列表选择学校官网完成开学注册" class="desk__hint" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="portrait-hero" class="desk-portrait desk-portrait--hero" picking-mode="Ignore">
+            <ui:VisualElement name="portrait-hero-view" class="desk-portrait__view" picking-mode="Ignore" />
+        </ui:VisualElement>
+        <ui:VisualElement name="portrait-thief" class="desk-portrait desk-portrait--thief" picking-mode="Ignore">
+            <ui:VisualElement name="portrait-thief-view" class="desk-portrait__view" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="thief-alert-fx" class="desk-alert-fx" picking-mode="Ignore">
+            <ui:VisualElement name="thief-alert-1" class="desk-alert" picking-mode="Ignore" />
+            <ui:VisualElement name="thief-alert-2" class="desk-alert" picking-mode="Ignore" />
+            <ui:VisualElement name="thief-alert-3" class="desk-alert" picking-mode="Ignore" />
+            <ui:VisualElement name="thief-alert-4" class="desk-alert" picking-mode="Ignore" />
+            <ui:VisualElement name="thief-alert-5" class="desk-alert" picking-mode="Ignore" />
+            <ui:VisualElement name="thief-alert-6" class="desk-alert" picking-mode="Ignore" />
+            <ui:VisualElement name="thief-alert-7" class="desk-alert" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="url-dropdown-popup" class="url-dropdown-popup is-hidden">
+            <ui:Button name="url-option-0" text="（请选择网址）" class="url-dropdown-popup__option" />
+            <ui:Button name="url-option-1" text="" class="url-dropdown-popup__option" />
+            <ui:Button name="url-option-2" text="" class="url-dropdown-popup__option" />
+            <ui:Button name="url-option-3" text="" class="url-dropdown-popup__option" />
+            <ui:Button name="url-option-4" text="" class="url-dropdown-popup__option" />
+            <ui:Button name="url-option-5" text="" class="url-dropdown-popup__option" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="desk-wallet" class="desk-wallet" picking-mode="Ignore">
+            <ui:VisualElement name="desk-wallet-icon" class="desk-wallet__icon" picking-mode="Ignore" />
+            <ui:Label name="desk-wallet-amount" text="1,280" class="desk-wallet__amount" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="phish-flight-layer" class="phish-flight-layer" picking-mode="Ignore">
+            <ui:VisualElement name="phish-flight-1" class="magic-projectile" picking-mode="Ignore">
+                <ui:VisualElement class="magic-spark magic-spark--halo" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--outer" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--core" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-1" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-2" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-3" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-4" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-5" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="phish-flight-2" class="magic-projectile" picking-mode="Ignore">
+                <ui:VisualElement class="magic-spark magic-spark--halo" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--outer" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--core" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-1" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-2" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-3" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-4" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-5" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="phish-flight-3" class="magic-projectile" picking-mode="Ignore">
+                <ui:VisualElement class="magic-spark magic-spark--halo" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--outer" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--core" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-1" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-2" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-3" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-4" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-5" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="phish-flight-4" class="magic-projectile" picking-mode="Ignore">
+                <ui:VisualElement class="magic-spark magic-spark--halo" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--outer" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--core" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-1" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-2" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-3" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-4" picking-mode="Ignore" />
+                <ui:VisualElement class="magic-spark magic-spark--tail-5" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="coin-penalty-layer" class="coin-penalty-layer" picking-mode="Ignore">
+            <ui:VisualElement name="coin-flight-1" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-2" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-3" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-4" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-5" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-6" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-7" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-8" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-9" class="penalty-coin" picking-mode="Ignore" />
+            <ui:VisualElement name="coin-flight-10" class="penalty-coin" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <ui:VisualElement name="scholarship-notification-layer" class="scholarship-notification-layer is-hidden">
+            <ui:Button name="scholarship-notification" class="scholarship-notification">
+                <ui:VisualElement class="scholarship-notification__avatar" picking-mode="Ignore" />
+                <ui:VisualElement class="scholarship-notification__body" picking-mode="Ignore">
+                    <ui:Label text="微信 · 学生资助中心" class="scholarship-notification__sender" picking-mode="Ignore" />
+                    <ui:Label text="您有一笔助学金待领取" class="scholarship-notification__message" picking-mode="Ignore" />
+                    <ui:Label text="点击查看领取详情" class="scholarship-notification__hint" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:Button>
+        </ui:VisualElement>
+
+        <ui:VisualElement name="scholarship-message-layer" class="scholarship-message-layer is-hidden">
+            <ui:VisualElement class="scholarship-window">
+                <ui:VisualElement class="scholarship-window__header">
+                    <ui:VisualElement class="scholarship-window__brand" picking-mode="Ignore">
+                        <ui:Label text="微信" class="scholarship-window__title" picking-mode="Ignore" />
+                        <ui:Label text="消息通知" class="scholarship-window__channel" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Button name="btn-scholarship-close" text="关闭" class="scholarship-window__close" />
+                </ui:VisualElement>
+                <ui:VisualElement class="scholarship-window__divider" picking-mode="Ignore" />
+                <ui:VisualElement class="scholarship-window__sender-card" picking-mode="Ignore">
+                    <ui:VisualElement class="scholarship-window__avatar" picking-mode="Ignore" />
+                    <ui:VisualElement class="scholarship-window__sender-info" picking-mode="Ignore">
+                        <ui:Label text="蓝湾大学学生资助中心" class="scholarship-window__sender-name" picking-mode="Ignore" />
+                        <ui:Label text="scholarship@blueharbor-edu-support.top" class="scholarship-window__sender-email" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="刚刚" class="scholarship-window__time" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:VisualElement class="scholarship-window__bubble" picking-mode="Ignore">
+                    <ui:Label text="同学你好：经审核，你已获得 2026 年秋季助学金资格。" class="scholarship-window__message" picking-mode="Ignore" />
+                    <ui:Label text="请于 24 小时内登录助学金申领系统补充银行卡和验证码，逾期名额将自动取消。" class="scholarship-window__message scholarship-window__message--last" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:Label text="助学金申领入口" class="scholarship-window__link-label" picking-mode="Ignore" />
+                <ui:Button name="btn-scholarship-phishing-link" text="https://blueharbor-edu.cn.scholarship-claim.top" class="scholarship-window__link" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

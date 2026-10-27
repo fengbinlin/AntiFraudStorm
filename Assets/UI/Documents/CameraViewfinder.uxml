@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="root" class="viewfinder is-hidden" picking-mode="Ignore">
+        <ui:VisualElement name="frame" class="viewfinder__frame" picking-mode="Ignore" />
+        <ui:VisualElement name="capture-flash" class="viewfinder__flash is-hidden" picking-mode="Ignore" />
+    </ui:VisualElement>
+</ui:UXML>
